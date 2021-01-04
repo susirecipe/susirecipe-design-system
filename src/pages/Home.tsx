@@ -1,7 +1,8 @@
 import React from 'react';
+import Introduce from 'components/another/Introduce/Introduce';
 
 const Home:React.FC = () => {
-  return <div>home</div>
+  return <Introduce />
 }
 
 export default Home;
