@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import Sidebar from 'components/another/Sidebar/Sidebar';
 
 const AppRouter: React.FC = () => (
-  <Router>
+  <Router basename='/susirecipe-design-system'>
     <Sidebar />
     <Content>
       <Switch>
