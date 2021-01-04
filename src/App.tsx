@@ -1,9 +1,11 @@
 import React from 'react';
+import AppRouter from 'pages';
 
 const App:React.FC = () => {
   return (
-    <div className="App">
-    </div>
+    <>
+      <AppRouter />
+    </>
   );
 }
 
