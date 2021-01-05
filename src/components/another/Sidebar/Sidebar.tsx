@@ -1,10 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { SidebarContainer, ImageWrapper, ComponentsList, CopyRight } from './Sidebar.styled';
+import { useSelector, useDispatch } from 'react-redux';
+import { RootState } from 'common/store';
+import { slideClose } from 'actions/slidebar';
+import { SidebarContainer, CloseBtn, ImageWrapper, ComponentsList, CopyRight } from './Sidebar.styled';
+import { AiOutlineClose } from 'react-icons/ai';
 
 const Sidebar: React.FC = () => {
+  const dispatch = useDispatch();
+  const isOpen: boolean = useSelector((state: RootState) => state.slidebar);
+
+  const closeSlideMenu = () => {
+    dispatch(slideClose());
+  };
+
   return (
-    <SidebarContainer>
+    <SidebarContainer show={isOpen}>
+      <CloseBtn>
+        <AiOutlineClose onClick={closeSlideMenu} />
+      </CloseBtn>
       <ImageWrapper>
         <Link to="/">
           <img src={process.env.PUBLIC_URL + '/asset/logo.png'} alt="logo" />
@@ -85,9 +99,7 @@ const Sidebar: React.FC = () => {
           <br />
         </ul>
       </ComponentsList>
-      <CopyRight>
-        copyright &copy; All Right Reserved by 수시레시피
-      </CopyRight>
+      <CopyRight>copyright &copy; All Right Reserved by 수시레시피</CopyRight>
     </SidebarContainer>
   );
 };

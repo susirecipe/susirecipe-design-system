@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const SidebarContainer = styled.aside`
+export const SidebarContainer = styled.aside<{ show?: boolean }>`
   width: 300px;
   height: 100vh;
   position: fixed;
@@ -9,6 +9,26 @@ export const SidebarContainer = styled.aside`
   background-color: #e6e6e6;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   overflow: scroll;
+  z-index: 10;
+  transition: all 0.7s ease-in-out;
+
+  @media screen and (max-width: 769px) {
+    margin-left: ${props => (props.show ? '0px' : '-300px')};
+  }
+`;
+
+export const CloseBtn = styled.span`
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: none;
+  font-size: 1.5rem;
+  color: #374553;
+  cursor: pointer;
+
+  @media screen and (max-width: 769px) {
+    display: inline;
+  }
 `;
 
 export const ImageWrapper = styled.div`
