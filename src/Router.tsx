@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Home from 'pages/Home';
-import styled from 'styled-components';
 import Sidebar from 'components/another/Sidebar/Sidebar';
+import Home from 'pages/Home';
+import Content from 'components/another/Content/Content';
 
 const AppRouter: React.FC = () => (
   <Router basename='/susirecipe-design-system'>
@@ -16,10 +16,5 @@ const AppRouter: React.FC = () => (
     </Content>
   </Router>
 );
-
-const Content = styled.div`
-  width: calc(100vw - 300px);
-  margin-left: 300px;
-`;
 
 export default AppRouter;
