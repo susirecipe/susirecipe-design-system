@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="수시레시피에 쓰일 디자인 시스템을 알려줍니다" />
+    <meta property="og:title" content="수시레시피 디자인 시스템 구조" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://susirecipe.github.io/susirecipe-design-system" />
+    <meta property="og:description" content="수시레시피에 쓰일 디자인 시스템을 알려줍니다" />
+    <meta property="og:local" content="ko_KR" />
+    <title>404 Not Found</title>
+  </head>
+  <body>
+    <script>
+      const params = window.location.pathname;
+      const paramArray = params.split('/').slice(2);
+      const queryString = "?page=/" + paramArray.join('/');
+      const replaceUrl = '/susirecipe-design-system' + queryString;
+      window.location.replace(replaceUrl);
+    </script>
+  </body>
+</html>
