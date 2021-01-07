@@ -63,7 +63,6 @@ const ButtonIntro: React.FC = () => {
           <input
             type="range"
             name="width"
-            placeholder="ex) 150px"
             value={inputs.width}
             min="100"
             max="500"
@@ -76,7 +75,6 @@ const ButtonIntro: React.FC = () => {
           <input
             type="range"
             name="height"
-            placeholder="ex) 50px"
             value={inputs.height}
             min="50"
             max="150"
@@ -129,15 +127,15 @@ const ButtonIntro: React.FC = () => {
         <Button width="200px" height="60px">
           기본 버튼
         </Button>
-        <div style={{ marginLeft: 20 }}></div>
+        <MarginBox margin={25} />
         <Button width="200px" height="60px" disabled>
           막힌 버튼
         </Button>
-        <div style={{ marginLeft: 20 }}></div>
+        <MarginBox margin={25} />
         <Button width="200px" height="60px" loading>
           로딩 버튼
         </Button>
-        <div style={{ marginLeft: 20 }}></div>
+        <MarginBox margin={25} />
         <Button width="200px" height="60px" disabled loading>
           막힌 로딩 버튼
         </Button>
