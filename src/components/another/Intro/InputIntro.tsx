@@ -43,7 +43,7 @@ const InputIntro: React.FC = () => {
         인풋은 고객의 정보를 담고 전달해주는 컴포넌트로 매우 중요하고 로직이 복잡합니다. <br />
         많은 기능들이 들어간 만큼 문서를 깊이 보고 이해하는 것을 추천드립니다. <br />
         인풋은 다양한 상황에서 디자인의 변화가 일어나므로 다양한 디자인을 제작해야 했습니다. 그에 따라 개발도 다양하게
-        이루어 져야 했습니다.
+        이루어져야 했습니다.
         <br />
         그래서 우리는 텍스트, 이메일, 비밀번호 등 다양한 형태의 인풋컴포넌트를 제작하기로 했습니다.
       </IntroParagraph>
@@ -172,7 +172,7 @@ const InputIntro: React.FC = () => {
           <li>required?: boolean (필수 입력)</li>
           <li>minLength?: number (최소 글자수)</li>
           <li>maxLength?: number (최대 글자수)</li>
-          <li>readOnly?: boolean (읽기 전용)</li>
+          <li>readOnly?: boolean (읽기 전용 활성화)</li>
           <li>black?: boolean (검정테마 인풋 사용)</li>
           <li>onChange: (event: React.ChangeEvent&lt;HTMLInputElement&gt;) =&gt; void (onChange 함수)</li>
         </ListBox>
