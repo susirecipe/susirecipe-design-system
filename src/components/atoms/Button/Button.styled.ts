@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-export const ButtonDefault = styled.button<{ width: string; height: string; disabled?: boolean; loading?: boolean }>`
+export const StyledButton = styled.button<{ width: string; height: string; disabled?: boolean; loading?: boolean }>`
   width: ${props => props.width};
   height: ${props => props.height};
   border: none;

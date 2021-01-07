@@ -1,6 +1,6 @@
 import React from 'react';
 import { BiLoaderCircle } from 'react-icons/bi';
-import { ButtonDefault } from './Button.styled';
+import { StyledButton } from './Button.styled';
 
 interface props {
   width: string;
@@ -12,9 +12,9 @@ interface props {
 
 const Button: React.FC<props> = ({ children, width, height, disabled, loading, onClick }) => {
   return (
-    <ButtonDefault width={width} height={height} disabled={disabled} loading={loading} onClick={onClick}>
+    <StyledButton width={width} height={height} disabled={disabled} loading={loading} onClick={onClick}>
       {loading ? <BiLoaderCircle /> : children}
-    </ButtonDefault>
+    </StyledButton>
   );
 };
 
