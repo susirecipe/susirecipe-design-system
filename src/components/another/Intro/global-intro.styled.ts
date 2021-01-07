@@ -21,6 +21,7 @@ export const IntroParagraph = styled.p`
 export const ComponentWrapper = styled.div`
   padding: 20px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 `;
@@ -62,6 +63,7 @@ export const PropsTable = styled.table`
 
   td,
   th {
+    width: 33%;
     padding: 12px 15px;
     color: #374553;
   }
@@ -108,4 +110,15 @@ export const ListBox = styled.ul`
   li {
     padding: 7px 0;
   }
+`;
+
+export const BlackBGBox = styled.div`
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
 `;
