@@ -147,36 +147,34 @@ const InputIntro: React.FC = () => {
       <IntroSmallHeader>
         Refference<small>(for Develop)</small>
       </IntroSmallHeader>
-      <IntroParagraph>
-        <CodeBox>
-          <code>
-            &lt;TextInput <br />
-            &nbsp;&nbsp;width=&#123;"200px"&#125; <br />
-            &nbsp;&nbsp;value=&#123;inputState&#125; <br />
-            &nbsp;&nbsp;name="text" <br />
-            &nbsp;&nbsp;placeholder="값을 입력하세요" <br />
-            &nbsp;&nbsp;required <br />
-            &nbsp;&nbsp;miLength=&#123;5&#125; <br />
-            &nbsp;&nbsp;maxLength=&#123;10&#125; <br />
-            &nbsp;&nbsp;readonly <br />
-            &nbsp;&nbsp;black <br />
-            &nbsp;&nbsp;onChange=&#123;handleMethod&#125; <br />
-            /&gt;
-          </code>
-        </CodeBox>
-        <ListBox>
-          <li>width: string (인풋의 넓이 '%, px 등등 여러단위 가능')</li>
-          <li>value: string (인풋의 값)</li>
-          <li>name: string ('email, phone, birthday' 등으로 자동완성 가능)</li>
-          <li>placeholder?: string (인풋이 비어있을 때 보여지는 글자)</li>
-          <li>required?: boolean (필수 입력)</li>
-          <li>minLength?: number (최소 글자수)</li>
-          <li>maxLength?: number (최대 글자수)</li>
-          <li>readOnly?: boolean (읽기 전용 활성화)</li>
-          <li>black?: boolean (검정테마 인풋 사용)</li>
-          <li>onChange: (event: React.ChangeEvent&lt;HTMLInputElement&gt;) =&gt; void (onChange 함수)</li>
-        </ListBox>
-      </IntroParagraph>
+      <CodeBox>
+        <code>
+          &lt;TextInput <br />
+          &nbsp;&nbsp;width=&#123;"200px"&#125; <br />
+          &nbsp;&nbsp;value=&#123;inputState&#125; <br />
+          &nbsp;&nbsp;name="text" <br />
+          &nbsp;&nbsp;placeholder="값을 입력하세요" <br />
+          &nbsp;&nbsp;required <br />
+          &nbsp;&nbsp;miLength=&#123;5&#125; <br />
+          &nbsp;&nbsp;maxLength=&#123;10&#125; <br />
+          &nbsp;&nbsp;readonly <br />
+          &nbsp;&nbsp;black <br />
+          &nbsp;&nbsp;onChange=&#123;handleMethod&#125; <br />
+          /&gt;
+        </code>
+      </CodeBox>
+      <ListBox>
+        <li>width: string (인풋의 넓이 '%, px 등등 여러단위 가능')</li>
+        <li>value: string (인풋의 값)</li>
+        <li>name: string ('email, phone, birthday' 등으로 자동완성 가능)</li>
+        <li>placeholder?: string (인풋이 비어있을 때 보여지는 글자)</li>
+        <li>required?: boolean (필수 입력)</li>
+        <li>minLength?: number (최소 글자수)</li>
+        <li>maxLength?: number (최대 글자수)</li>
+        <li>readOnly?: boolean (읽기 전용 활성화)</li>
+        <li>black?: boolean (검정테마 인풋 사용)</li>
+        <li>onChange: (event: React.ChangeEvent&lt;HTMLInputElement&gt;) =&gt; void (onChange 함수)</li>
+      </ListBox>
     </IntroContainer>
   );
 };

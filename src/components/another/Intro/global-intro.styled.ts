@@ -96,7 +96,7 @@ export const MarginBox = styled.div<{ margin: number }>`
 
 export const CodeBox = styled.div`
   margin: 20px 0;
-  padding: 15px;
+  padding: 20px;
   border-radius: 15px;
   background-color: #f6f6f6;
 `;
@@ -108,7 +108,7 @@ export const ListBox = styled.ul`
   list-style-type: disc;
 
   li {
-    padding: 7px 0;
+    padding: 15px 0;
   }
 `;
 

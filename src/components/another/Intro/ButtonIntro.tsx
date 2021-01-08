@@ -60,27 +60,11 @@ const ButtonIntro: React.FC = () => {
       <ControlBox>
         <div>
           넓이:{' '}
-          <input
-            type="range"
-            name="width"
-            value={inputs.width}
-            min="100"
-            max="500"
-            step="10"
-            onChange={handleInput}
-          />
+          <input type="range" name="width" value={inputs.width} min="100" max="500" step="10" onChange={handleInput} />
         </div>
         <div>
           높이:{' '}
-          <input
-            type="range"
-            name="height"
-            value={inputs.height}
-            min="50"
-            max="150"
-            step="5"
-            onChange={handleInput}
-          />
+          <input type="range" name="height" value={inputs.height} min="50" max="150" step="5" onChange={handleInput} />
         </div>
         <div>
           내용:{' '}
@@ -132,11 +116,11 @@ const ButtonIntro: React.FC = () => {
           막힌 버튼
         </Button>
         <MarginBox margin={25} />
-        <Button width="200px" height="60px" loading>
+        <Button width="200px" height="60px" isLoading>
           로딩 버튼
         </Button>
         <MarginBox margin={25} />
-        <Button width="200px" height="60px" disabled loading>
+        <Button width="200px" height="60px" disabled isLoading>
           막힌 로딩 버튼
         </Button>
       </ComponentWrapper>
@@ -154,21 +138,19 @@ const ButtonIntro: React.FC = () => {
       <IntroSmallHeader>
         Refference<small>(for Develop)</small>
       </IntroSmallHeader>
-      <IntroParagraph>
-        <CodeBox>
-          <code>
-            &lt;Button width=&#123;"150px"&#125; height=&#123;"70px"&#125; disabled loading
-            onClick=&#123;clickMethod&#125;&gt;&lt;/Button&gt;
-          </code>
-        </CodeBox>
-        <ListBox>
-          <li>width: string (버튼의 넓이 '%, px 등등 여러단위 가능')</li>
-          <li>height: string (버튼의 높이 '%, px 등등 여러단위 가능')</li>
-          <li>disabled?: boolean - (disable버튼 활성화)</li>
-          <li>loading?: boolean - (loading버튼 활성화)</li>
-          <li>onClick?: (event?: React.MouseEvent&lt;HTMLElement&gt;) =&gt; void - (onClick 함수)</li>
-        </ListBox>
-      </IntroParagraph>
+      <CodeBox>
+        <code>
+          &lt;Button width=&#123;"150px"&#125; height=&#123;"70px"&#125; disabled isLoading
+          onClick=&#123;clickMethod&#125;&gt;&lt;/Button&gt;
+        </code>
+      </CodeBox>
+      <ListBox>
+        <li>width: string (버튼의 넓이 '%, px 등등 여러단위 가능')</li>
+        <li>height: string (버튼의 높이 '%, px 등등 여러단위 가능')</li>
+        <li>disabled?: boolean - (disable버튼 활성화)</li>
+        <li>isLoading?: boolean - (loading버튼 활성화)</li>
+        <li>onClick?: (event?: React.MouseEvent&lt;HTMLElement&gt;) =&gt; void - (onClick 함수)</li>
+      </ListBox>
     </IntroContainer>
   );
 };

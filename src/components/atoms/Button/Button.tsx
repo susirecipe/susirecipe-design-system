@@ -6,16 +6,13 @@ interface props {
   width: string;
   height: string;
   disabled?: boolean;
-  loading?: boolean;
+  isLoading?: boolean;
   onClick?: (event?: React.MouseEvent<HTMLElement>) => void;
 }
 
-const Button: React.FC<props> = ({ children, width, height, disabled, loading, onClick }) => {
-  return (
-    <StyledButton width={width} height={height} disabled={disabled} loading={loading} onClick={onClick}>
-      {loading ? <BiLoaderCircle /> : children}
-    </StyledButton>
-  );
+const Button: React.FC<props> = props => {
+  const { isLoading, children } = props;
+  return <StyledButton {...props}>{isLoading ? <BiLoaderCircle /> : children}</StyledButton>;
 };
 
 export default Button;
