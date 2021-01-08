@@ -1,7 +1,7 @@
 import React from 'react';
-import { IntroduceContainer, ImageWarpper, IntroduceComment } from './Introduce.styled';
+import { IntroduceContainer, ImageWarpper, IntroduceComment } from './HomeIntroduce';
 
-const Introduce: React.FC = () => {
+const HomeIntroduce: React.FC = () => {
   return (
     <IntroduceContainer>
       <ImageWarpper>
@@ -51,4 +51,4 @@ const Introduce: React.FC = () => {
   );
 };
 
-export default Introduce;
+export default HomeIntroduce;

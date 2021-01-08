@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLocation, useHistory } from 'react-router-dom';
-import Introduce from 'components/another/Introduce/Introduce';
+import HomeIntroduce from 'components/another/HomeIntroduce/HomeIntroduce';
 
 const queryString = require('query-string');
 
@@ -13,7 +13,7 @@ const Home: React.FC = () => {
     history.replace(query.page);
   }
 
-  return <Introduce />;
+  return <HomeIntroduce />;
 };
 
 export default Home;
