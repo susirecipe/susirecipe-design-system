@@ -1,5 +1,5 @@
 import React from 'react';
-import { IntroduceContainer, ImageWarpper, IntroduceComment } from './HomeIntroduce';
+import { IntroduceContainer, ImageWarpper, IntroduceComment } from './HomeIntroduce.styled';
 
 const HomeIntroduce: React.FC = () => {
   return (

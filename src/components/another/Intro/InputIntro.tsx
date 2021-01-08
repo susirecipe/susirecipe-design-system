@@ -7,7 +7,6 @@ import {
   MarginBox,
   ControlBox,
   PropsTable,
-  BlackBGBox,
   CodeBox,
   ListBox,
 } from './global-intro.styled';
@@ -43,31 +42,28 @@ const InputIntro: React.FC = () => {
         인풋은 고객의 정보를 담고 전달해주는 컴포넌트로 매우 중요하고 로직이 복잡합니다. <br />
         많은 기능들이 들어간 만큼 문서를 깊이 보고 이해하는 것을 추천드립니다. <br />
         인풋은 다양한 상황에서 디자인의 변화가 일어나므로 다양한 디자인을 제작해야 했습니다. 그에 따라 개발도 다양하게
-        이루어져야 했습니다.
-        <br />
+        이루어져야 했습니다. <br />
         그래서 우리는 텍스트, 이메일, 비밀번호 등 다양한 형태의 인풋컴포넌트를 제작하기로 했습니다.
       </IntroParagraph>
 
       <IntroSmallHeader>Overview</IntroSmallHeader>
-      <ComponentWrapper>
-        <BlackBGBox>
-          <TextInput
-            width={`${inputs.width}px`}
-            value={overviewInput.textWhiteInput}
-            name="textWhiteInput"
-            placeholder="값을 입력해주세요"
-            onChange={handleOverviewInput}
-          />
-          <MarginBox margin={20} />
-          <TextInput
-            width={`${inputs.width}px`}
-            value={overviewInput.textBlackInput}
-            name="textBlackInput"
-            placeholder="값을 입력해주세요"
-            black
-            onChange={handleOverviewInput}
-          />
-        </BlackBGBox>
+      <ComponentWrapper blackBG>
+        <TextInput
+          width={`${inputs.width}px`}
+          value={overviewInput.textWhiteInput}
+          name="textWhiteInput"
+          placeholder="값을 입력해주세요"
+          onChange={handleOverviewInput}
+        />
+        <MarginBox margin={20} />
+        <TextInput
+          width={`${inputs.width}px`}
+          value={overviewInput.textBlackInput}
+          name="textBlackInput"
+          placeholder="값을 입력해주세요"
+          black
+          onChange={handleOverviewInput}
+        />
       </ComponentWrapper>
       <ControlBox>
         <div>
@@ -92,6 +88,7 @@ const InputIntro: React.FC = () => {
           현재 변수에 저장되는 인풋 값(검정): <b>{overviewInput.textBlackInput}</b>
         </div>
       </ControlBox>
+      <MarginBox margin={40} />
 
       <IntroSmallHeader>Props</IntroSmallHeader>
       <PropsTable>
@@ -117,23 +114,21 @@ const InputIntro: React.FC = () => {
       </PropsTable>
 
       <IntroSmallHeader>Types</IntroSmallHeader>
-      <ComponentWrapper>
-        <BlackBGBox>
-          텍스트
-          <TextInput width="200px" value="텍스트" name="text" onChange={hndleFakeInput} />
-          <MarginBox margin={20} />
-          이메일
-          <EmailInput width="200px" value="email@email.com" name="email" onChange={hndleFakeInput} />
-          <MarginBox margin={20} />
-          비밀번호
-          <PasswordInput width="200px" value="password" name="password" onChange={hndleFakeInput} />
-          <MarginBox margin={20} />
-          숫자
-          <NumberInput width="200px" value="15" name="number" onChange={hndleFakeInput} />
-          <MarginBox margin={20} />
-          읽기전용
-          <TextInput width="200px" value="읽기전용" name="text" readOnly onChange={hndleFakeInput} />
-        </BlackBGBox>
+      <ComponentWrapper blackBG>
+        텍스트
+        <TextInput width="200px" value="텍스트" name="text" onChange={hndleFakeInput} />
+        <MarginBox margin={20} />
+        이메일
+        <EmailInput width="200px" value="email@email.com" name="email" onChange={hndleFakeInput} />
+        <MarginBox margin={20} />
+        비밀번호
+        <PasswordInput width="200px" value="password" name="password" onChange={hndleFakeInput} />
+        <MarginBox margin={20} />
+        숫자
+        <NumberInput width="200px" value="15" name="number" onChange={hndleFakeInput} />
+        <MarginBox margin={20} />
+        읽기전용
+        <TextInput width="200px" value="읽기전용" name="text" readOnly onChange={hndleFakeInput} />
       </ComponentWrapper>
       <MarginBox margin={60} />
 
@@ -149,6 +144,9 @@ const InputIntro: React.FC = () => {
       </IntroSmallHeader>
       <CodeBox>
         <code>
+          &lt;TextInput /&gt;&nbsp;&lt;EmailInput /&gt;&nbsp;&lt;PasswordInput /&gt;&nbsp;&lt;NumberInput /&gt;
+          <br />
+          <br />
           &lt;TextInput <br />
           &nbsp;&nbsp;width=&#123;"200px"&#125; <br />
           &nbsp;&nbsp;value=&#123;inputState&#125; <br />

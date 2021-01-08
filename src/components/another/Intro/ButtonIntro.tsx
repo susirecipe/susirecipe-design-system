@@ -21,19 +21,7 @@ const ButtonIntro: React.FC = () => {
 
   const handleInput = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { value, name } = event.target;
-    switch (name) {
-      case 'width':
-        setInputs({ ...inputs, width: value });
-        return;
-      case 'height':
-        setInputs({ ...inputs, height: value });
-        return;
-      case 'content':
-        setInputs({ ...inputs, content: value });
-        return;
-      default:
-        return;
-    }
+    setInputs({ ...inputs, [name]: value });
   };
 
   const onButtonClick = () => {
@@ -77,6 +65,7 @@ const ButtonIntro: React.FC = () => {
           />
         </div>
       </ControlBox>
+      <MarginBox margin={40} />
 
       <IntroSmallHeader>Props</IntroSmallHeader>
       <PropsTable>
