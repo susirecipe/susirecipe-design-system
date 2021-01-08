@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import ScrollToTop from 'common/ScrollToTop';
 import Sidebar from 'components/another/Sidebar/Sidebar';
 import Home from 'pages/Home';
 import Button from 'pages/Button';
@@ -27,6 +28,7 @@ import Content from 'components/another/Content/Content';
 
 const AppRouter: React.FC = () => (
   <Router basename="/susirecipe-design-system">
+    <ScrollToTop />
     <Sidebar />
     <Content>
       <Switch>
