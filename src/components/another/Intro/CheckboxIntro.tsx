@@ -71,13 +71,15 @@ const CheckboxIntro: React.FC = () => {
       <IntroParagraph>
         개발적으로 주의할 점이 몇개 있습니다. 우선 체크박스의 'v'자 모양은 이미지로 구현되었기에 이미지 url을 정해진
         위치와 이름을 가지고있어야 합니다. <br />
-        위치는 public폴더에 asset폴더 안에 있어야하고 이름은 'checked.png', 'non-check.png' 이여야 합니다.
+        위치는 <b>public폴더에 asset폴더</b> 안에 있어야하고 이름은 <b>'checked.png', 'non-check.png'</b> 이여야 합니다.
       </IntroParagraph>
 
       <IntroSmallHeader>
         Refference<small>(for Develop)</small>
       </IntroSmallHeader>
-      <CodeBox>&lt;Checkbox id="check1" checked=&#123;checked&#125; onChange=&#123;changeMethod&#125; /&gt;</CodeBox>
+      <CodeBox>
+        <code>&lt;Checkbox id="check1" checked=&#123;checked&#125; onChange=&#123;changeMethod&#125; /&gt;</code>
+      </CodeBox>
       <ListBox>
         <li>id: string (아이디 값, 필수적으로 들어가야함)</li>
         <li>checked: boolean (체크 여부)</li>
