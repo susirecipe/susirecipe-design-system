@@ -105,7 +105,7 @@ const HeaderIntro: React.FC = () => {
         </tbody>
       </PropsTable>
 
-      <IntroSmallHeader>Waning</IntroSmallHeader>
+      <IntroSmallHeader>Warning</IntroSmallHeader>
       <IntroParagraph>
         헤더에서는 딱히 주의해야할 점은 없습니다. <br />
         다만 지정요소로 크기가 정해져 있기때문에 상황에 맞게 적절히 사용해주어야 합니다. <br />

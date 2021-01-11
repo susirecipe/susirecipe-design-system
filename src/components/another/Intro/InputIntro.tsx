@@ -157,7 +157,7 @@ const InputIntro: React.FC = () => {
           &nbsp;&nbsp;maxLength=&#123;10&#125; <br />
           &nbsp;&nbsp;readonly <br />
           &nbsp;&nbsp;black <br />
-          &nbsp;&nbsp;onChange=&#123;handleMethod&#125; <br />
+          &nbsp;&nbsp;onChange=&#123;changeMethod&#125; <br />
           /&gt;
         </code>
       </CodeBox>

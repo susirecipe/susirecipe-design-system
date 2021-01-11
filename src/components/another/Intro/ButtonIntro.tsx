@@ -115,7 +115,7 @@ const ButtonIntro: React.FC = () => {
       </ComponentWrapper>
       <MarginBox margin={80} />
 
-      <IntroSmallHeader>Waning</IntroSmallHeader>
+      <IntroSmallHeader>Warning</IntroSmallHeader>
       <IntroParagraph>
         주의할 점은 디자인의 통일성을 위해 배경색은 <b>옐로우계열의 컬러로 통일</b>하였다는 것과 폰트와 색깔또한
         통일하였다는 것입니다.
