@@ -57,6 +57,9 @@ const AppRouter: React.FC = () => (
         <Route path="/atoms/icon">
           <Icon />
         </Route>
+        <Route path="/atoms/link-button/:page">
+          <LinkButton />
+        </Route>
         <Route path="/atoms/link-button">
           <LinkButton />
         </Route>
