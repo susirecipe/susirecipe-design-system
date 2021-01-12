@@ -40,7 +40,7 @@ export const ControlBox = styled.div<{ direction?: string }>`
   align-items: center;
   color: #374553;
 
-  input {
+  input[type='text'] {
     width: 150px;
     margin: 10px 0;
     margin-left: 15px;
@@ -53,9 +53,29 @@ export const ControlBox = styled.div<{ direction?: string }>`
     color: #374553;
   }
 
-  input:focus {
+  input[type='text']:focus {
     outline: none;
     background-color: #f6f6f6;
+  }
+
+  input[type='submit'] {
+    width: 100px;
+    margin: 10px 0;
+    margin-left: 15px;
+    padding: 7px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+    background-color: #e6e6e6;
+    font-size: 0.8rem;
+    color: #374553;
+    cursor: pointer;
+  }
+
+  input[type='range'] {
+    width: 150px;
+    margin: 10px 0;
+    margin-left: 15px;
   }
 
   button {
