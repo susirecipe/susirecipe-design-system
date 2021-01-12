@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/susirecipe-design-system/static/css/main.a120edf2.chunk.css",
-    "main.js": "/susirecipe-design-system/static/js/main.d7e0193a.chunk.js",
-    "main.js.map": "/susirecipe-design-system/static/js/main.d7e0193a.chunk.js.map",
+    "main.js": "/susirecipe-design-system/static/js/main.31dad2e4.chunk.js",
+    "main.js.map": "/susirecipe-design-system/static/js/main.31dad2e4.chunk.js.map",
     "runtime-main.js": "/susirecipe-design-system/static/js/runtime-main.a88dffae.js",
     "runtime-main.js.map": "/susirecipe-design-system/static/js/runtime-main.a88dffae.js.map",
-    "static/js/2.0c087c49.chunk.js": "/susirecipe-design-system/static/js/2.0c087c49.chunk.js",
-    "static/js/2.0c087c49.chunk.js.map": "/susirecipe-design-system/static/js/2.0c087c49.chunk.js.map",
+    "static/js/2.148915e2.chunk.js": "/susirecipe-design-system/static/js/2.148915e2.chunk.js",
+    "static/js/2.148915e2.chunk.js.map": "/susirecipe-design-system/static/js/2.148915e2.chunk.js.map",
     "index.html": "/susirecipe-design-system/index.html",
     "static/css/main.a120edf2.chunk.css.map": "/susirecipe-design-system/static/css/main.a120edf2.chunk.css.map",
-    "static/js/2.0c087c49.chunk.js.LICENSE.txt": "/susirecipe-design-system/static/js/2.0c087c49.chunk.js.LICENSE.txt"
+    "static/js/2.148915e2.chunk.js.LICENSE.txt": "/susirecipe-design-system/static/js/2.148915e2.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.a88dffae.js",
-    "static/js/2.0c087c49.chunk.js",
+    "static/js/2.148915e2.chunk.js",
     "static/css/main.a120edf2.chunk.css",
-    "static/js/main.d7e0193a.chunk.js"
+    "static/js/main.31dad2e4.chunk.js"
   ]
 }
