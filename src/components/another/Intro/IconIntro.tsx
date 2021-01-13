@@ -9,7 +9,7 @@ import {
   CodeBox,
   ListBox,
 } from './global-intro.styled';
-import { WebIcon, AppIcon } from 'components/atoms/Icon/Icon';
+import Icon from 'components/atoms/Icon/Icon';
 
 const IconIntro: React.FC = () => {
   return (
@@ -24,11 +24,11 @@ const IconIntro: React.FC = () => {
 
       <IntroSmallHeader>Overview</IntroSmallHeader>
       <ComponentWrapper>
-        <WebIcon src={process.env.PUBLIC_URL + '/asset/facebook.svg'} alt="icon" />
-        <WebIcon src={process.env.PUBLIC_URL + '/asset/twitter.svg'} alt="icon" />
-        <WebIcon src={process.env.PUBLIC_URL + '/asset/youtube.svg'} alt="icon" />
-        <WebIcon src={process.env.PUBLIC_URL + '/asset/instagram.svg'} alt="icon" />
-        <WebIcon src={process.env.PUBLIC_URL + '/asset/share.svg'} alt="icon" />
+        <Icon src={process.env.PUBLIC_URL + '/asset/facebook.svg'} alt="icon" />
+        <Icon src={process.env.PUBLIC_URL + '/asset/twitter.svg'} alt="icon" />
+        <Icon src={process.env.PUBLIC_URL + '/asset/youtube.svg'} alt="icon" />
+        <Icon src={process.env.PUBLIC_URL + '/asset/instagram.svg'} alt="icon" />
+        <Icon src={process.env.PUBLIC_URL + '/asset/share.svg'} alt="icon" />
       </ComponentWrapper>
       <MarginBox margin={40} />
 
@@ -52,17 +52,11 @@ const IconIntro: React.FC = () => {
 
       <IntroSmallHeader>Types</IntroSmallHeader>
       <ComponentWrapper>
-        웹 아이콘
-        <WebIcon src={process.env.PUBLIC_URL + '/asset/youtube.svg'} alt="icon" />
+        아이콘
+        <Icon src={process.env.PUBLIC_URL + '/asset/youtube.svg'} alt="icon" />
         <MarginBox margin={30} />
-        앱 아이콘
-        <AppIcon src={process.env.PUBLIC_URL + '/asset/youtube.svg'} alt="icon" />
-        <MarginBox margin={30} />
-        링크 웹 아이콘
-        <WebIcon to="#" src={process.env.PUBLIC_URL + '/asset/youtube.svg'} alt="icon" />
-        <MarginBox margin={30} />
-        링크 앱 아이콘
-        <AppIcon to="#" src={process.env.PUBLIC_URL + '/asset/youtube.svg'} alt="icon" />
+        링크 아이콘
+        <Icon to="#" src={process.env.PUBLIC_URL + '/asset/youtube.svg'} alt="icon" />
       </ComponentWrapper>
       <MarginBox margin={80} />
 
@@ -77,10 +71,7 @@ const IconIntro: React.FC = () => {
       </IntroSmallHeader>
       <CodeBox>
         <code>
-          &lt;WebIcon /&gt;&lt;AppIcon /&gt;
-          <br />
-          <br />
-          &lt;WebIcon <br />
+          &lt;Icon <br />
           &nbsp;&nbsp;to="/path" <br />
           &nbsp;&nbsp;src=&#123;process.env.PUBLIC_URL + "/asset/icon.svg"&#125; <br />
           &nbsp;&nbsp;alt="icon" <br />
