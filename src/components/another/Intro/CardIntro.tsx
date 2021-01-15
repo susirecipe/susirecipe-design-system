@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import styled from 'styled-components';
 import {
   IntroContainer,
   IntroParagraph,
@@ -12,12 +13,39 @@ import {
 } from './global-intro.styled';
 import Card from 'components/molecules/Card/Card';
 
+const StyledSampleContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    width: 64px;
+    height: 80px;
+    margin-bottom: 40px;
+  }
+
+  h1 {
+    text-align: center;
+    font-weight: 800;
+    font-size: 1.5rem;
+  }
+`;
+
 const CardIntro: React.FC = () => {
   const [inputs, setInputs] = useState({
     width: '260',
     height: '300',
     headerColor: '#6b6b6b',
   });
+
+  const sampleJSX = (
+    <StyledSampleContent>
+      <img src={process.env.PUBLIC_URL + '/asset/card_sample_icon.png'} alt="icon" />
+      <h1>
+        자기소개서 첨삭 <br />및 완성본
+      </h1>
+    </StyledSampleContent>
+  );
 
   const hadnleInput = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
@@ -35,9 +63,7 @@ const CardIntro: React.FC = () => {
       <IntroSmallHeader>Overview</IntroSmallHeader>
       <ComponentWrapper>
         <Card width={`${inputs.width}px`} height={`${inputs.height}px`} header="카드" headerColor={inputs.headerColor}>
-          <p>카드입니다</p>
-          <p>카드에 들어갈</p>
-          <p>내용을 입력하세요</p>
+          {sampleJSX}
         </Card>
       </ComponentWrapper>
       <ControlBox>
@@ -109,14 +135,14 @@ const CardIntro: React.FC = () => {
       <CodeBox>
         <code>
           &lt;Card width=&#123;"260px"&#125; height=&#123;"300px"&#125; headerColor="#6b6b6b"
-          onClick=&#123;clickMethod&#125;&gt;&#123;children&#125;&lt;/Card&gt;
+          onClick=&#123;clickMethod&#125;&gt;&#123;sampleJSX&#125;&lt;/Card&gt;
         </code>
       </CodeBox>
       <ListBox>
         <li>width: string (카드의 넓이 '%, px 등등 여러단위 가능')</li>
         <li>height: string (카드의 높이 '%, px 등등 여러단위 가능')</li>
         <li>headerColor?: string - (헤더의 색깔)</li>
-        <li>children?: React.ReactNode - (내용에 들어갈 JSX)</li>
+        <li>sampleJSX?: React.ReactNode - (내용에 들어갈 JSX)</li>
         <li>onClick?: (event?: React.MouseEvent&lt;HTMLElement&gt;) =&gt; void - (onClick 함수)</li>
       </ListBox>
     </IntroContainer>

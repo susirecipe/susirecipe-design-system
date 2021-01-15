@@ -23,6 +23,6 @@ export const StyledCardContent = styled.div<{ height: string }>`
   justify-content: center;
   align-items: center;
   border-radius: 0 0 10px 10px;
-  background-color: #cfcfcf;
+  background-color: #f6f6f6;
   color: #333;
 `;
