@@ -40,10 +40,12 @@ export const ControlBox = styled.div<{ direction?: string }>`
   align-items: center;
   color: #374553;
 
-  input[type='text'] {
+  input {
     width: 150px;
-    margin: 10px 0;
-    margin-left: 15px;
+    margin: 10px 15px;
+  }
+
+  input[type='text'] {
     padding: 7px;
     border: none;
     border-radius: 5px;
@@ -60,8 +62,6 @@ export const ControlBox = styled.div<{ direction?: string }>`
 
   input[type='submit'] {
     width: 100px;
-    margin: 10px 0;
-    margin-left: 15px;
     padding: 7px;
     border: none;
     border-radius: 5px;
@@ -70,12 +70,6 @@ export const ControlBox = styled.div<{ direction?: string }>`
     font-size: 0.8rem;
     color: #374553;
     cursor: pointer;
-  }
-
-  input[type='range'] {
-    width: 150px;
-    margin: 10px 0;
-    margin-left: 15px;
   }
 
   button {
@@ -101,7 +95,6 @@ export const PropsTable = styled.table`
   margin: 20px 0;
   margin-bottom: 100px;
   text-align: center;
-  /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); */
 
   td,
   th {
