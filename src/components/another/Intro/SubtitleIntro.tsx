@@ -30,8 +30,8 @@ const SubtitleIntro: React.FC = () => {
 
       <IntroSmallHeader>Overview</IntroSmallHeader>
       <ComponentWrapper>
-        <div style={{ width: 500, position: 'relative' }}>
-          <img style={{ width: '100%' }} src={process.env.PUBLIC_URL + '/asset/logo.png'} alt="" />
+        <div style={{ width: 700, position: 'relative' }}>
+          <img style={{ width: '100%' }} src={process.env.PUBLIC_URL + '/asset/subtitleBG.png'} alt="" />
           <Subtitle>{input}</Subtitle>
         </div>
       </ComponentWrapper>
