@@ -1,8 +1,8 @@
-import { SLIDE_OPEN, SLIDE_CLOSE, SlideAction } from 'actions/slidebar';
+import { SLIDE_OPEN, SLIDE_CLOSE } from 'actions/slidebar';
 
 const initialState: boolean = false;
 
-export const slideReducer = (state = initialState, action: SlideAction): boolean => {
+export const slideReducer = (state = initialState, action: DefaultAction): boolean => {
   switch (action.type) {
     case SLIDE_OPEN:
       return true;
