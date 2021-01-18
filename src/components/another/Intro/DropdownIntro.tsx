@@ -1,4 +1,6 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { showDropdown } from 'actions/dropdown';
 import {
   IntroContainer,
   IntroParagraph,
@@ -12,13 +14,8 @@ import {
 } from './global-intro.styled';
 import Dropdown from 'components/molecules/Dropdown/Dropdown';
 
-interface menu {
-  name: string;
-  link: string;
-}
-
 const DropdownIntro: React.FC = () => {
-  const defaultMenus = useMemo<Array<menu>>(
+  const defaultMenus = useMemo<Array<Menu>>(
     () => [
       {
         name: 'button',
@@ -40,11 +37,12 @@ const DropdownIntro: React.FC = () => {
     startPos: 20,
   });
   const [menus, setMenus] = useState(defaultMenus);
+  const dispatch = useDispatch();
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    const newMenu: menu = {
+    const newMenu: Menu = {
       name: inputs.menuItem,
       link: '#',
     };
@@ -60,6 +58,11 @@ const DropdownIntro: React.FC = () => {
       setInputs({ ...inputs, [name]: value });
     }
   };
+
+  // initial open
+  useEffect(() => {
+    dispatch(showDropdown());
+  }, [dispatch]);
 
   return (
     <IntroContainer>
@@ -129,19 +132,21 @@ const DropdownIntro: React.FC = () => {
 
       <IntroSmallHeader>Warning</IntroSmallHeader>
       <IntroParagraph>
-        드랍다운 안에 메뉴들이 들어갈 때 반드시 링크버튼으로 구성해야한다. <br />
-        그리고 <b>메뉴 시작위치</b>는 네비게이션 바 위치에 따라 달라지므로 변경할 수 있다.
+        드랍다운 안에 메뉴들은 반드시 링크버튼으로 구성해야합니다. 그리고 <b>메뉴 시작위치</b>는 네비게이션 바 위치에 따라 달라지므로 변경할 수 있습니다. <br />
+        개발자들이 주의할 점은 리덕스로 <b>드랍다운 보여주기를 온오프</b> 할 수 있다는 점을 꼭 알고 있어야합니다. 이 부분은 네비게이션 바와 연관됩니다.
       </IntroParagraph>
 
       <IntroSmallHeader>
         Refference<small>(for Develop)</small>
       </IntroSmallHeader>
       <CodeBox>
-        <code>&lt;Dropdown menu=&#123;menuArray&#125; leftPos=&#123;50&#125; /&gt;</code>
+        <code>&lt;Dropdown menu=&#123;menuArray&#125; leftPos=&#123;50&#125; onMouseEnter=&#123;handleHoverOn&#125; onMouseLeave&#123;handleHoverOut&#125; /&gt;</code>
       </CodeBox>
       <ListBox>
         <li>menu: Array&lt;&#123; name: string; link: string; &#125;&gt; (메뉴 객체들의 리스트)</li>
         <li>leftPos: number (메뉴 시작지점 위치)</li>
+        <li>onMouseEnter?: (event: React.MouseEvent&lt;HTMLDivElement, MouseEvent&gt;) =&gt; void;</li>
+        <li>onMouseLeave?: (event: React.MouseEvent&lt;HTMLDivElement, MouseEvent&gt;) =&gt; void;</li>
       </ListBox>
     </IntroContainer>
   );
