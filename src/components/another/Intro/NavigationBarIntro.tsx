@@ -66,7 +66,7 @@ const NavigationBarIntro: React.FC = () => {
       ) : (
         <>
           <ComponentWrapper>
-            <NavigationBar menu={defaultMenus} logoImgSrc="/asset/logo3.png" />
+            <NavigationBar menu={defaultMenus} logoImgSrc={process.env.PUBLIC_URL + '/asset/logo3.png'} />
           </ComponentWrapper>
         </>
       )}
@@ -109,7 +109,10 @@ const NavigationBarIntro: React.FC = () => {
         Refference<small>(for Develop)</small>
       </IntroSmallHeader>
       <CodeBox>
-        <code>&lt;NavigationBar menu=&#123;defaultMenus&#125; logoImgSrc="/asset/logo3.png" /&gt;</code>
+        <code>
+          &lt;NavigationBar menu=&#123;defaultMenus&#125; logoImgSrc=&#123;process.env.PUBLIC_URL +
+          "/asset/logo3.png"&#125; /&gt;
+        </code>
       </CodeBox>
       <ListBox>
         <li>

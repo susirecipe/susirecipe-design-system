@@ -53,7 +53,7 @@ const NavigationBar: React.FC<props> = ({ menu, logoImgSrc }) => {
       <StyledNavivagtionBar>
         <ImageBox>
           <Link to="/">
-            <img src={process.env.PUBLIC_URL + logoImgSrc} alt="logo" />
+            <img src={logoImgSrc} alt="logo" />
           </Link>
         </ImageBox>
         <StyledLinkBox>
