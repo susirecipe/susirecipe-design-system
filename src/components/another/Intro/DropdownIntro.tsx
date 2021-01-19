@@ -13,6 +13,7 @@ import {
   ListBox,
 } from './global-intro.styled';
 import Dropdown from 'components/molecules/Dropdown/Dropdown';
+import NotSupport from 'components/another/NotSupport/NotSupport';
 
 const DropdownIntro: React.FC = () => {
   const defaultMenus = useMemo<Array<Menu>>(
@@ -73,33 +74,41 @@ const DropdownIntro: React.FC = () => {
       </IntroParagraph>
 
       <IntroSmallHeader>Overview</IntroSmallHeader>
-      <ComponentWrapper>
-        <Dropdown menu={menus} leftPos={inputs.startPos} />
-      </ComponentWrapper>
-      <ControlBox>
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            name="menuItem"
-            value={inputs.menuItem}
-            placeholder="값을 입력하세요"
-            onChange={handleInput}
-          />
-          <input type="submit" value="추가" />
-        </form>
-        <div>
-          메뉴 시작 위치:{' '}
-          <input
-            type="range"
-            name="startPos"
-            value={inputs.startPos}
-            min="20"
-            max="500"
-            step="10"
-            onChange={handleInput}
-          />
-        </div>
-      </ControlBox>
+      {window.innerWidth < 769 ? (
+        <NotSupport />
+      ) : (
+        <>
+          <ComponentWrapper>
+            <Dropdown menu={menus} leftPos={inputs.startPos} />
+          </ComponentWrapper>
+
+          <ControlBox>
+            <form onSubmit={handleSubmit} style={{ textAlign: 'center' }}>
+              <input
+                type="text"
+                name="menuItem"
+                value={inputs.menuItem}
+                placeholder="값을 입력하세요"
+                onChange={handleInput}
+              />
+              <input type="submit" value="추가" />
+            </form>
+            <div style={{ textAlign: 'center' }}>
+              메뉴 시작 위치:{' '}
+              <input
+                type="range"
+                name="startPos"
+                value={inputs.startPos}
+                min="20"
+                max="500"
+                step="10"
+                onChange={handleInput}
+              />
+            </div>
+          </ControlBox>
+        </>
+      )}
+      <MarginBox margin={40} />
 
       <IntroSmallHeader>Props</IntroSmallHeader>
       <PropsTable>
@@ -132,15 +141,20 @@ const DropdownIntro: React.FC = () => {
 
       <IntroSmallHeader>Warning</IntroSmallHeader>
       <IntroParagraph>
-        드랍다운 안에 메뉴들은 반드시 링크버튼으로 구성해야합니다. 그리고 <b>메뉴 시작위치</b>는 네비게이션 바 위치에 따라 달라지므로 변경할 수 있습니다. <br />
-        개발자들이 주의할 점은 리덕스로 <b>드랍다운 보여주기를 온오프</b> 할 수 있다는 점을 꼭 알고 있어야합니다. 이 부분은 네비게이션 바와 연관됩니다.
+        드랍다운 안에 메뉴들은 반드시 링크버튼으로 구성해야합니다. 그리고 <b>메뉴 시작위치</b>는 네비게이션 바 위치에
+        따라 달라지므로 변경할 수 있습니다. <br />
+        개발자들이 주의할 점은 리덕스로 <b>드랍다운 보여주기를 온오프</b> 할 수 있다는 점을 꼭 알고 있어야합니다. 이
+        부분은 네비게이션 바와 연관됩니다.
       </IntroParagraph>
 
       <IntroSmallHeader>
         Refference<small>(for Develop)</small>
       </IntroSmallHeader>
       <CodeBox>
-        <code>&lt;Dropdown menu=&#123;menuArray&#125; leftPos=&#123;50&#125; onMouseEnter=&#123;handleHoverOn&#125; onMouseLeave&#123;handleHoverOut&#125; /&gt;</code>
+        <code>
+          &lt;Dropdown menu=&#123;menuArray&#125; leftPos=&#123;50&#125; onMouseEnter=&#123;handleHoverOn&#125;
+          onMouseLeave&#123;handleHoverOut&#125; /&gt;
+        </code>
       </CodeBox>
       <ListBox>
         <li>menu: Array&lt;&#123; name: string; link: string; &#125;&gt; (메뉴 객체들의 리스트)</li>

@@ -33,6 +33,17 @@ const StyledSampleContent = styled.div`
     font-size: 1.1rem;
     color: #333;
   }
+
+  @media (max-width: 769px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    img {
+      margin: 20px 0;
+    }
+  }
 `;
 
 const StepCardIntro: React.FC = () => {

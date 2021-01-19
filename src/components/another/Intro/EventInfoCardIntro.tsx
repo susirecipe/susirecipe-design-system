@@ -56,11 +56,12 @@ const EventInfoCardIntro: React.FC = () => {
       </IntroParagraph>
 
       <IntroSmallHeader>Overview</IntroSmallHeader>
+
       <ComponentWrapper>
         <EventInfoCard rows={eventRows} />
       </ComponentWrapper>
       <ControlBox>
-        <form onSubmit={handleSubmit}>
+        <form className="responsive" onSubmit={handleSubmit}>
           탭:{' '}
           <input
             type="text"
@@ -127,9 +128,7 @@ const EventInfoCardIntro: React.FC = () => {
         <code>&lt;EventInfoCard rows=&#123;eventRows&#125; /&gt;</code>
       </CodeBox>
       <ListBox>
-        <li>
-          rows: Array&lt;&#123; tab: string; content: React.ReactNode; &#125;&gt; (탭과 내용이 담긴 객체의 배열)
-        </li>
+        <li>rows: Array&lt;&#123; tab: string; content: React.ReactNode; &#125;&gt; (탭과 내용이 담긴 객체의 배열)</li>
       </ListBox>
     </IntroContainer>
   );

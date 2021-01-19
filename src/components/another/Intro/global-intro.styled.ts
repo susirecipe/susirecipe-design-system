@@ -40,6 +40,10 @@ export const ControlBox = styled.div<{ direction?: string }>`
   align-items: center;
   color: #374553;
 
+  @media (max-width: 769px) {
+    flex-direction: column;
+  }
+
   input {
     width: 150px;
     margin: 10px 15px;
@@ -72,10 +76,14 @@ export const ControlBox = styled.div<{ direction?: string }>`
     cursor: pointer;
   }
 
+  input[type='color'] {
+    width: 60px;
+  }
+
   button {
     width: 140px;
     height: 40px;
-    margin: 20px;
+    margin: 10px 20px;
     border: 3px solid #4284bd;
     border-radius: 10px;
     background-color: transparent;
@@ -87,6 +95,15 @@ export const ControlBox = styled.div<{ direction?: string }>`
   button.active {
     background-color: #4284bd;
     color: #fff;
+  }
+
+  @media (max-width: 1025px) {
+    form.responsive {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
   }
 `;
 

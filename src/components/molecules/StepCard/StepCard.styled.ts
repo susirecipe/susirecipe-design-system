@@ -4,6 +4,11 @@ export const StyledStepCard = styled.div`
   width: 100%;
   height: 150px;
   display: flex;
+
+  @media (max-width: 1025px) {
+    flex-direction: column;
+    height: initial;
+  }
 `;
 
 export const StyledStepCardHeader = styled.div`
@@ -17,6 +22,12 @@ export const StyledStepCardHeader = styled.div`
   font-weight: bold;
   font-size: 1.85rem;
   color: #fff;
+
+  @media (max-width: 1025px) {
+    width: 100%;
+    height: 70px;
+    border-radius: 10px 10px 0 0;
+  }
 `;
 
 export const StyledStepCardContent = styled.div`
@@ -28,4 +39,11 @@ export const StyledStepCardContent = styled.div`
   border-radius: 0 10px 10px 0;
   box-sizing: border-box;
   background-color: #fafafa;
+
+  @media (max-width: 1025px) {
+    width: 100%;
+    padding: 30px 10px;
+    justify-content: center;
+    border-radius: 0 0 10px 10px;
+  }
 `;

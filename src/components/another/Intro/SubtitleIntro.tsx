@@ -11,6 +11,7 @@ import {
   ListBox,
 } from './global-intro.styled';
 import Subtitle from 'components/molecules/Subtitle/Subtitle';
+import NotSupport from 'components/another/NotSupport/NotSupport';
 
 const SubtitleIntro: React.FC = () => {
   const [input, setInput] = useState('안녕하세요');
@@ -29,15 +30,22 @@ const SubtitleIntro: React.FC = () => {
       </IntroParagraph>
 
       <IntroSmallHeader>Overview</IntroSmallHeader>
-      <ComponentWrapper>
-        <div style={{ width: 700, position: 'relative' }}>
-          <img style={{ width: '100%' }} src={process.env.PUBLIC_URL + '/asset/subtitleBG.png'} alt="" />
-          <Subtitle>{input}</Subtitle>
-        </div>
-      </ComponentWrapper>
-      <ControlBox>
-        <input type="text" placeholder="값을 입력해주세요" value={input} onChange={handleInput} />
-      </ControlBox>
+      {window.innerWidth < 769 ? (
+        <NotSupport />
+      ) : (
+        <>
+          <ComponentWrapper>
+            <div style={{ width: '700px', position: 'relative' }}>
+              <img style={{ width: '100%' }} src={process.env.PUBLIC_URL + '/asset/subtitleBG.png'} alt="" />
+              <Subtitle>{input}</Subtitle>
+            </div>
+          </ComponentWrapper>
+          <ControlBox>
+            <input type="text" placeholder="값을 입력해주세요" value={input} onChange={handleInput} />
+          </ControlBox>
+        </>
+      )}
+
       <MarginBox margin={40} />
 
       <IntroSmallHeader>Props</IntroSmallHeader>

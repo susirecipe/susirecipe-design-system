@@ -2,6 +2,7 @@ import { hiddenDropdown } from 'actions/dropdown';
 import NavigationBar from 'components/organisms/NavigationBar/NavigationBar';
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
+import NotSupport from 'components/another/NotSupport/NotSupport';
 import {
   IntroContainer,
   IntroSmallHeader,
@@ -60,9 +61,16 @@ const NavigationBarIntro: React.FC = () => {
       </IntroParagraph>
 
       <IntroSmallHeader>Overview</IntroSmallHeader>
-      <ComponentWrapper>
-        <NavigationBar menu={defaultMenus} logoImgSrc="/asset/logo3.png" />
-      </ComponentWrapper>
+      {window.innerWidth < 1025 ? (
+        <NotSupport />
+      ) : (
+        <>
+          <ComponentWrapper>
+            <NavigationBar menu={defaultMenus} logoImgSrc="/asset/logo3.png" />
+          </ComponentWrapper>
+        </>
+      )}
+
       <MarginBox margin={40} />
 
       <IntroSmallHeader>Props</IntroSmallHeader>
