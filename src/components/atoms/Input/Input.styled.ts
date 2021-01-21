@@ -13,6 +13,7 @@ const InputDefault = styled.input<{ width: string, readOnly?: boolean }>`
   padding: 10px;
   border: 3px solid transparent;
   border-radius: 10px;
+  box-sizing: border-box;
   font-size: 0.85rem;
 `;
 
