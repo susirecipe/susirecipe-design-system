@@ -18,7 +18,7 @@ const Banner: React.FC<props> = ({ description }) => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setInputs({ name: '', phone: '', private: true });
-    alert('신청이 완료되었습니다.');
+    alert(`이름: ${inputs.name}\n연락처: ${inputs.phone}\n신청이 완료되었습니다.`);
   };
 
   const handleInput = (event: React.ChangeEvent<HTMLInputElement>) => {
