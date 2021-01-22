@@ -1,20 +1,19 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { modalClose } from 'actions/modal';
-import { RootState } from 'common/store';
 import { StyledModalBlackLayout, StyledModalContentBox, StyledModal } from './Modal.styled';
 import { FaTimes } from 'react-icons/fa';
 
-const Modal: React.FC = ({ children }) => {
-  const isOpen = useSelector((state: RootState) => state.modal);
-  const dispatch = useDispatch();
+interface props {
+  active: boolean;
+  onClose: React.Dispatch<React.SetStateAction<boolean>>;
+}
 
+const Modal: React.FC<props> = ({ children, active, onClose }) => {
   const handleModal = () => {
-    dispatch(modalClose());
+    onClose(false);
   };
 
   return (
-    <StyledModal isOpen={isOpen}>
+    <StyledModal isOpen={active}>
       <StyledModalBlackLayout onClick={handleModal} />
       <StyledModalContentBox>
         <FaTimes className="close" onClick={handleModal} />

@@ -1,5 +1,4 @@
-import React from 'react';
-import { useDispatch } from 'react-redux';
+import React, { useState } from 'react';
 import {
   IntroContainer,
   IntroParagraph,
@@ -9,7 +8,6 @@ import {
   CodeBox,
   ListBox,
 } from './global-intro.styled';
-import { modalOpen } from 'actions/modal';
 import Modal from 'components/organisms/Modal/Modal';
 import Button from 'components/atoms/Button/Button';
 import styled from 'styled-components';
@@ -40,12 +38,14 @@ const StyledSampleJSX = styled.div`
 `;
 
 const ModalIntro: React.FC = () => {
-  const dispatch = useDispatch();
+  const [modalState1, setModalState1] = useState(false);
+  const [modalState2, setModalState2] = useState(false);
 
-  const sampleJSX = (
+  const sampleJSX1 = (
     <StyledSampleJSX>
       <h1>모달 예시입니다.</h1>
       <p>이곳에 모달의 내용을 적으시면 됩니다.</p>
+      <p>이 모달은 예시 1번 모달입니다. 예시 2번도 열어보세요.</p>
       <p>
         jsx로 값을 넘겨줄 수 있기 때문에 매우 자유로운 디자인이 가능합니다. 모달 안의 내용은 자유롭게 디자인하셔도
         됩니다.
@@ -55,9 +55,15 @@ const ModalIntro: React.FC = () => {
     </StyledSampleJSX>
   );
 
-  const hadnleModal = () => {
-    dispatch(modalOpen());
-  };
+  const sampleJSX2 = (
+    <StyledSampleJSX>
+      <h1>모달 예시입니다.</h1>
+      <p>이곳에 모달의 내용을 적으시면 됩니다.</p>
+      <p>이 모달은 예시 2번 모달입니다.</p>
+      <img src={process.env.PUBLIC_URL + '/asset/card_sample_icon.png'} alt="sample_image" />
+      <p>이렇게 사진도 마음대로 넣을 수 있습니다.</p>
+    </StyledSampleJSX>
+  );
 
   return (
     <IntroContainer>
@@ -71,9 +77,18 @@ const ModalIntro: React.FC = () => {
 
       <IntroSmallHeader>Overview</IntroSmallHeader>
       <ComponentWrapper>
-        <Modal>{sampleJSX}</Modal>
-        <Button width="130px" height="40px" onClick={hadnleModal}>
-          모달 열기
+        <Modal active={modalState1} onClose={setModalState1}>
+          {sampleJSX1}
+        </Modal>
+        <Modal active={modalState2} onClose={setModalState2}>
+          {sampleJSX2}
+        </Modal>
+        <Button width="150px" height="45px" onClick={() => setModalState1(true)}>
+          첫번째 모달 열기
+        </Button>
+        <MarginBox margin={30} />
+        <Button width="150px" height="45px" onClick={() => setModalState2(true)}>
+          두번째 모달 열기
         </Button>
       </ComponentWrapper>
       <MarginBox margin={40} />
