@@ -21,7 +21,6 @@ import NavigationBar from 'pages/NavigationBar';
 import Footer from 'pages/Footer';
 import HambergTab from 'pages/HambergTab';
 import Slider from 'pages/Slider';
-import Nstep from 'pages/Nstep';
 import Banner from 'pages/Banner';
 import Modal from 'pages/Modal';
 import Content from 'components/another/Content/Content';
@@ -94,9 +93,6 @@ const AppRouter: React.FC = () => (
         </Route>
         <Route path="/organisms/slider">
           <Slider />
-        </Route>
-        <Route path="/organisms/n-step">
-          <Nstep />
         </Route>
         <Route path="/organisms/banner">
           <Banner />
