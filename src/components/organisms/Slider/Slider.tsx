@@ -1,7 +1,6 @@
 import React from 'react';
 import Slick from 'react-slick';
 import { StyledSlider } from './Slider.styled';
-import Card from 'components/molecules/Card/Card';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import styled from 'styled-components';
@@ -14,6 +13,16 @@ const StyledPrevButton = styled.button`
     font-size: 40px;
     color: #ccc;
   }
+
+  @media (max-width: 769px) {
+    width: 30px;
+    height: 30px;
+    left: -33px;
+
+    &::before {
+      font-size: 30px;
+    }
+  }
 `;
 
 const StyledNextButton = styled.button`
@@ -23,6 +32,16 @@ const StyledNextButton = styled.button`
   &::before {
     font-size: 40px;
     color: #ccc;
+  }
+
+  @media (max-width: 769px) {
+    width: 30px;
+    height: 30px;
+    right: -33px;
+
+    &::before {
+      font-size: 30px;
+    }
   }
 `;
 
@@ -43,11 +62,12 @@ const NextButton = ({ className, style, onClick }: any) => {
 };
 
 interface props {
+  slideCards: Array<React.ReactNode>;
   slidesToShow?: number;
   autoplay?: boolean;
 }
 
-const Slider: React.FC<props> = ({ slidesToShow = 2, autoplay = true }) => {
+const Slider: React.FC<props> = ({ slideCards, slidesToShow = 2, autoplay = true }) => {
   const settings = {
     dots: true,
     infinite: true,
@@ -63,18 +83,11 @@ const Slider: React.FC<props> = ({ slidesToShow = 2, autoplay = true }) => {
   return (
     <StyledSlider>
       <Slick {...settings}>
-        <Card width="80%" height="200px" header="test">
-          1
-        </Card>
-        <Card width="80%" height="200px" header="test">
-          2
-        </Card>
-        <Card width="80%" height="200px" header="test">
-          3
-        </Card>
-        <Card width="80%" height="200px" header="test">
-          4
-        </Card>
+        {slideCards.map((card, idx) => (
+          <React.Fragment key={idx}>
+            <div className="slide-card">{card}</div>
+          </React.Fragment>
+        ))}
       </Slick>
     </StyledSlider>
   );

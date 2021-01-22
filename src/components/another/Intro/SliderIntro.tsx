@@ -11,11 +11,27 @@ import {
   ListBox,
 } from './global-intro.styled';
 import Slider from 'components/organisms/Slider/Slider';
+import Card from 'components/molecules/Card/Card';
 
 const SliderIntro: React.FC = () => {
   const [inputs, setInputs] = useState({
-    slideNum: '2',
+    slideNum: window.innerWidth < 1025 ? '1' : '2',
   });
+
+  const SampleJSXArray: Array<React.ReactNode> = [
+    <Card width="100%" height="200px" header="test">
+      1
+    </Card>,
+    <Card width="100%" height="200px" header="test">
+      2
+    </Card>,
+    <Card width="100%" height="200px" header="test">
+      3
+    </Card>,
+    <Card width="100%" height="200px" header="test">
+      4
+    </Card>,
+  ];
 
   const handleInput = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { value, name } = event.target;
@@ -32,7 +48,7 @@ const SliderIntro: React.FC = () => {
 
       <IntroSmallHeader>Overview</IntroSmallHeader>
       <ComponentWrapper>
-        <Slider slidesToShow={parseInt(inputs.slideNum)} />
+        <Slider slideCards={SampleJSXArray} slidesToShow={parseInt(inputs.slideNum)} />
       </ComponentWrapper>
       <ControlBox>
         슬라이드 개수:{' '}
@@ -79,7 +95,8 @@ const SliderIntro: React.FC = () => {
 
       <IntroSmallHeader>Warning</IntroSmallHeader>
       <IntroParagraph>
-        위의 예시에는 기존에 제작한 카드 분자를 사용했지만 <b>다양한 슬라이드카드 디자인이 가능합니다.</b> 예시의 형태에 얽메여 디자인할 필요가 없습니다.
+        위의 예시에는 기존에 제작한 카드 분자를 사용했지만 <b>다양한 슬라이드카드 디자인이 가능합니다.</b> 예시의 형태에
+        얽메여 디자인할 필요가 없습니다.
       </IntroParagraph>
 
       <IntroSmallHeader>
@@ -87,10 +104,11 @@ const SliderIntro: React.FC = () => {
       </IntroSmallHeader>
       <CodeBox>
         <code>
-          &lt;Slider slideToShow=&#123;2&#125; autoplay=&#123;true&#125; /&gt;
+          &lt;Slider slideCards=&#123;SampleJSXArray&#125; slideToShow=&#123;2&#125; autoplay=&#123;true&#125; /&gt;
         </code>
       </CodeBox>
       <ListBox>
+        <li>slideCards: Array&lt;React.ReactNode&gt; (슬라이드 카드 내용이 들어갈 배열)</li>
         <li>slideToShow?: number (한 번에 보여지는 슬라이드 개수, 기본 2개)</li>
         <li>autoplay?: string (자동 넘기기 기능, 기본 활성화)</li>
       </ListBox>
