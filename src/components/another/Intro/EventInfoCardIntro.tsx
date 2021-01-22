@@ -102,6 +102,11 @@ const EventInfoCardIntro: React.FC = () => {
           </tr>
           <tr>
             <td>탭 색깔</td>
+            <td>탭 이름</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
             <td>내용</td>
             <td></td>
           </tr>

@@ -44,8 +44,8 @@ const IconIntro: React.FC = () => {
         <tbody>
           <tr>
             <td>비율</td>
-            <td>소스</td>
-            <td>크기 (웹, 앱)</td>
+            <td>아이콘 모양</td>
+            <td></td>
           </tr>
         </tbody>
       </PropsTable>
@@ -62,8 +62,7 @@ const IconIntro: React.FC = () => {
 
       <IntroSmallHeader>Warning</IntroSmallHeader>
       <IntroParagraph>
-        이 컴포넌트는 <b>크기가 고정</b>이라는 것을 유의해야합니다. 반응형을 위해서 웹과 앱으로 형태를 나누었지만 그
-        안에서 해결해야 합니다.
+        이 컴포넌트는 <b>크기가 고정</b>이라는 것을 유의해야합니다.
       </IntroParagraph>
 
       <IntroSmallHeader>

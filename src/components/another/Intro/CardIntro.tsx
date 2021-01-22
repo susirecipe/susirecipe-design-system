@@ -135,7 +135,7 @@ const CardIntro: React.FC = () => {
       <CodeBox>
         <code>
           &lt;Card width=&#123;"260px"&#125; height=&#123;"300px"&#125; header="카드" headerColor="#6b6b6b"
-          onClick=&#123;clickMethod&#125;&gt;&#123;sampleJSX&#125;&lt;/Card&gt;
+          onClick=&#123;clickMethod&#125;&gt;&#123;children&#125;&lt;/Card&gt;
         </code>
       </CodeBox>
       <ListBox>
@@ -143,7 +143,7 @@ const CardIntro: React.FC = () => {
         <li>height: string (카드의 높이 '%, px 등등 여러단위 가능')</li>
         <li>header: string (카드 제목)</li>
         <li>headerColor?: string - (헤더의 색깔)</li>
-        <li>sampleJSX?: React.ReactNode - (내용에 들어갈 JSX)</li>
+        <li>children?: React.ReactNode - (내용에 들어갈 JSX)</li>
         <li>onClick?: (event?: React.MouseEvent&lt;HTMLElement&gt;) =&gt; void - (onClick 함수)</li>
       </ListBox>
     </IntroContainer>

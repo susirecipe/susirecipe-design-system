@@ -50,7 +50,7 @@ const ModalIntro: React.FC = () => {
         jsx로 값을 넘겨줄 수 있기 때문에 매우 자유로운 디자인이 가능합니다. 모달 안의 내용은 자유롭게 디자인하셔도
         됩니다.
       </p>
-      <img src={process.env.PUBLIC_URL + "/asset/step_sample_icon.png"} alt="sample_image"/>
+      <img src={process.env.PUBLIC_URL + '/asset/step_sample_icon.png'} alt="sample_image" />
       <p>이렇게 사진도 마음대로 넣을 수 있습니다.</p>
     </StyledSampleJSX>
   );
@@ -81,7 +81,8 @@ const ModalIntro: React.FC = () => {
       <IntroSmallHeader>Warning</IntroSmallHeader>
       <IntroParagraph>
         모바일과 웹에서의 모달 크기가 다르므로 모달 안의 내용을 디자인할 때 유의하여 디자인해야합니다. <br />
-        개발에 있어서는 <b>리덕스로 모달을 온오프</b> 할 수 있으므로 유의하여 개발하여야합니다.
+        개발에 있어서는 <b>리덕스로 모달을 온오프</b> 할 수 있으므로 유의하여 개발하여야합니다. 그래서 반드시{' '}
+        <b>페이지 안에 하나의 모달만 켜질수 있도록</b> 주의해야합니다.
       </IntroParagraph>
 
       <IntroSmallHeader>

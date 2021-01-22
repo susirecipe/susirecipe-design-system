@@ -112,11 +112,11 @@ const StepCardIntro: React.FC = () => {
         Refference<small>(for Develop)</small>
       </IntroSmallHeader>
       <CodeBox>
-        <code>&lt;StepCard header="1단계"&gt;&#123;sampleJSX&#125;&lt;/StepCard&gt;</code>
+        <code>&lt;StepCard header="1단계"&gt;&#123;children&#125;&lt;/StepCard&gt;</code>
       </CodeBox>
       <ListBox>
         <li>header: string (헤더에 쓰일 내용)</li>
-        <li>sampleJSX: React.ReactNode (내용 안에 들어갈 JSX)</li>
+        <li>children: React.ReactNode (내용 안에 들어갈 JSX)</li>
       </ListBox>
     </IntroContainer>
   );

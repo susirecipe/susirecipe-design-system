@@ -80,7 +80,7 @@ const SubtitleIntro: React.FC = () => {
       <IntroSmallHeader>Warning</IntroSmallHeader>
       <IntroParagraph>
         서브타이틀은 넓이가 가변요소로 되어있지만 <b>풀사이즈</b>입니다. 따라서 디자인하실때 기준을 하나 잡으시고 양끝에
-        맞게 배치해주셔야 합니다. <br />
+        맞게 배치해주셔야 합니다. 높이는 내용에 맞게 자동으로 조절됩니다. <br />
         개발할 때도 wrapper같은 블럭속성으로 감싸서 사용해주셔야합니다.
       </IntroParagraph>
 
