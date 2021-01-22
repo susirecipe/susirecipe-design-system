@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/susirecipe-design-system/static/css/main.a120edf2.chunk.css",
-    "main.js": "/susirecipe-design-system/static/js/main.7741cbc2.chunk.js",
-    "main.js.map": "/susirecipe-design-system/static/js/main.7741cbc2.chunk.js.map",
+    "main.js": "/susirecipe-design-system/static/js/main.e8ff9030.chunk.js",
+    "main.js.map": "/susirecipe-design-system/static/js/main.e8ff9030.chunk.js.map",
     "runtime-main.js": "/susirecipe-design-system/static/js/runtime-main.a88dffae.js",
     "runtime-main.js.map": "/susirecipe-design-system/static/js/runtime-main.a88dffae.js.map",
     "static/css/2.bec9215a.chunk.css": "/susirecipe-design-system/static/css/2.bec9215a.chunk.css",
-    "static/js/2.b2a95ce5.chunk.js": "/susirecipe-design-system/static/js/2.b2a95ce5.chunk.js",
-    "static/js/2.b2a95ce5.chunk.js.map": "/susirecipe-design-system/static/js/2.b2a95ce5.chunk.js.map",
+    "static/js/2.331c6d4a.chunk.js": "/susirecipe-design-system/static/js/2.331c6d4a.chunk.js",
+    "static/js/2.331c6d4a.chunk.js.map": "/susirecipe-design-system/static/js/2.331c6d4a.chunk.js.map",
     "index.html": "/susirecipe-design-system/index.html",
     "static/css/2.bec9215a.chunk.css.map": "/susirecipe-design-system/static/css/2.bec9215a.chunk.css.map",
     "static/css/main.a120edf2.chunk.css.map": "/susirecipe-design-system/static/css/main.a120edf2.chunk.css.map",
-    "static/js/2.b2a95ce5.chunk.js.LICENSE.txt": "/susirecipe-design-system/static/js/2.b2a95ce5.chunk.js.LICENSE.txt",
+    "static/js/2.331c6d4a.chunk.js.LICENSE.txt": "/susirecipe-design-system/static/js/2.331c6d4a.chunk.js.LICENSE.txt",
     "static/media/slick-theme.css": "/susirecipe-design-system/static/media/slick.c94f7671.ttf"
   },
   "entrypoints": [
     "static/js/runtime-main.a88dffae.js",
     "static/css/2.bec9215a.chunk.css",
-    "static/js/2.b2a95ce5.chunk.js",
+    "static/js/2.331c6d4a.chunk.js",
     "static/css/main.a120edf2.chunk.css",
-    "static/js/main.7741cbc2.chunk.js"
+    "static/js/main.e8ff9030.chunk.js"
   ]
 }
