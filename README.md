@@ -4,6 +4,13 @@
 
 > 🏠 [홈페이지](https://susirecipe.github.io/susirecipe-design-system/)를 통해서 디자인 시스템 문서를 확인해보세요!
 
+<div align=center>
+
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/susirecipe/susirecipe-design-system?color=green)
+![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/susirecipe/susirecipe-design-system/react)![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/susirecipe/susirecipe-design-system/redux)![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/susirecipe/susirecipe-design-system/typescript)![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/susirecipe/susirecipe-design-system/react-slick)
+
+</div>
+
 ## 📙 Component List
 ```
 .
@@ -14,7 +21,7 @@
 |    ├── Checkbox
 |    ├── Header 
 |    ├── Hr
-|    ├── Linkbutton
+|    ├── LinkButton
 |    ├── Icon
 |    └── Underline
 |
@@ -35,3 +42,28 @@
      └── Modal
 ```
 
+## 📎 바로가기 링크
+
+#### Atom
+* [Button](https://susirecipe.github.io/susirecipe-design-system/atoms/button)
+* [Input](https://susirecipe.github.io/susirecipe-design-system/atoms/input)
+* [Checkbox](https://susirecipe.github.io/susirecipe-design-system/atoms/checkbox)
+* [Header](https://susirecipe.github.io/susirecipe-design-system/atoms/header)
+* [Hr](https://susirecipe.github.io/susirecipe-design-system/atoms/hr)
+* [LinkButton](https://susirecipe.github.io/susirecipe-design-system/atoms/link-button)
+* [Icon](https://susirecipe.github.io/susirecipe-design-system/atoms/icon)
+* [Underline](https://susirecipe.github.io/susirecipe-design-system/atoms/underline)
+#### Molecule
+* [Subtitle](https://susirecipe.github.io/susirecipe-design-system/molecules/subtitle)
+* [Dropdown](https://susirecipe.github.io/susirecipe-design-system/molecules/dropdown)
+* [Card](https://susirecipe.github.io/susirecipe-design-system/molecules/card)
+* [EventInfoCard](https://susirecipe.github.io/susirecipe-design-system/molecules/event-info-card)
+* [StepCard](https://susirecipe.github.io/susirecipe-design-system/molecules/step-card)
+* [ConsultantCard](https://susirecipe.github.io/susirecipe-design-system/molecules/consultant-card)
+#### Organism
+* [NavigationBar](https://susirecipe.github.io/susirecipe-design-system/organisms/navigation-bar)
+* [Footer](https://susirecipe.github.io/susirecipe-design-system/organisms/footer)
+* [HamberTab](https://susirecipe.github.io/susirecipe-design-system/organisms/hamberg-tab)
+* [Slider](https://susirecipe.github.io/susirecipe-design-system/organisms/slider)
+* [Banner](https://susirecipe.github.io/susirecipe-design-system/organisms/banner)
+* [Modal](https://susirecipe.github.io/susirecipe-design-system/organisms/modal)
