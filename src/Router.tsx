@@ -17,6 +17,7 @@ import Dropdown from 'pages/Dropdown';
 import Card from 'pages/Card';
 import EventInfoCard from 'pages/EventInfoCard';
 import StepCard from 'pages/StepCard';
+import ConsultantCard from 'pages/ConsultantCard';
 import NavigationBar from 'pages/NavigationBar';
 import Footer from 'pages/Footer';
 import HambergTab from 'pages/HambergTab';
@@ -80,6 +81,9 @@ const AppRouter: React.FC = () => (
         </Route>
         <Route path="/molecules/step-card">
           <StepCard />
+        </Route>
+        <Route path="/molecules/consultant-card">
+          <ConsultantCard />
         </Route>
 
         <Route path="/organisms/navigation-bar">

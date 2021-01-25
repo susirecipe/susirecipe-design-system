@@ -72,6 +72,9 @@ const Sidebar: React.FC = () => {
           <li>
             <Link to="/molecules/step-card" onClick={closeSlideMenu}>stepCard</Link>
           </li>
+          <li>
+            <Link to="/molecules/consultant-card" onClick={closeSlideMenu}>consultantCard</Link>
+          </li>
           <br />
 
           <h1 className="subtitle">organisms</h1>
@@ -86,9 +89,6 @@ const Sidebar: React.FC = () => {
           </li>
           <li>
             <Link to="/organisms/slider" onClick={closeSlideMenu}>slider</Link>
-          </li>
-          <li>
-            <Link to="/organisms/n-step" onClick={closeSlideMenu}>Nstep</Link>
           </li>
           <li>
             <Link to="/organisms/banner" onClick={closeSlideMenu}>banner</Link>
