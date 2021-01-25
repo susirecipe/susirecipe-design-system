@@ -7,7 +7,12 @@
 <div align=center>
 
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/susirecipe/susirecipe-design-system?color=green)
-![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/susirecipe/susirecipe-design-system/react)![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/susirecipe/susirecipe-design-system/redux)![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/susirecipe/susirecipe-design-system/typescript)![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/susirecipe/susirecipe-design-system/react-slick)
+
+</div>
+
+<div align=center>
+
+![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/susirecipe/susirecipe-design-system/react) ![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/susirecipe/susirecipe-design-system/redux) ![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/susirecipe/susirecipe-design-system/typescript) ![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/susirecipe/susirecipe-design-system/react-slick)
 
 </div>
 
